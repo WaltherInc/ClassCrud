@@ -1,0 +1,145 @@
+
+<div class="row m-5">
+
+<!--Module-->
+<div class="d-flex header">
+
+  <div class="col-md-10 title">
+    <div class="row title-module">
+    <h1>CREATE EMPLOYEE</h1>
+    </div>
+  </div>
+
+  <div class="row col-md-2 mb-3 photo">
+    <div class="card picture-photo">
+      <img src= "assets/img/employee.png" class="card-img-top" alt="..." width="100%">
+    </div>
+    <div class="add-photo">
+    <a href="#" class="btn btn-primary">Add photo</a>
+    </div>
+  </div>
+
+</div>
+
+  <hr>
+<!--first session-->
+<form class="row g-1 needs-validation" novalidate>
+
+  <div class="col-md-4 mb-3">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.firstName" name="firstName" placeholder="Write your first name" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.lastName" name="lastName" placeholder="Write your last name" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <label for="validationCustom03" class="form-label">Identification document</label>
+    <input type="text" class="form-c" [(ngModel)]="createEmployee.identificationDocument" name="identificationDocument" placeholder="Write your identification document" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-3">
+    <label for="validationCustom03" class="form-label">Expedition place</label>
+    <input type="text" class="form-c" [(ngModel)]="createEmployee.expeditionPlace" name="expeditionPlace" placeholder="Write your expedition place" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+
+  <div class="col-md-5 mb-3">
+    <label for="validationCustom03" class="form-label">Residence address</label>
+    <input type="text" class="form-c" [(ngModel)]="createEmployee.residenceAdress" name="residenceAdress" placeholder="Write your residence address" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-c" [(ngModel)]="createEmployee.city" name="city" placeholder="Write your city" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+
+  <div class="row">
+
+  </div>
+  <div class="col-md-1 mb-3">
+    <label for="validationCustom04" class="form-label">Department</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid departament.
+    </div>
+  </div>
+
+  <div class="col-md-2 mb-4">
+    <label for="validationCustom04" class="form-label">Country</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid country.
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-3">
+      <label for="validationCustom03" class="form-label">Email</label>
+      <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="createEmployee.email" name="email" placeholder="Corporate email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2">@transfors.com.co</span>
+    </div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="inputState" class="form-label">Education</label>
+      <select id="inputState" class="form-select">
+        <option selected>High School.</option>
+        <option selected>Bachelor’s Degree</option>
+        <option selected>Master’s Degree</option>
+        <option selected>Doctorate</option>
+      </select>
+    </div>
+
+  <div class="col-md-3 mb-3">
+    <label for="validationCustom03" class="form-label">Academic title</label>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.academicTitle" name="academicTitle" placeholder="Write your academic title" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+
+<hr>
+
+</form>
+
+<div class="row col-md-18 mb-3" style="text-align: center;">
+  <div class="col-md-20">
+  <button type="button" class="btn btn-primary col-md-1 mb-2 me-2">Modify</button>
+  <button type="button" (click)="saveForms()" class="btn btn-primary col-md-1 mb-2 me-2">Save</button>
+  <button type="button" class="btn btn-primary col-md-1 mb-2 me-2">New employee</button>
+  <button type="button" class="btn btn-secondary col-md-1 mb-2 me-2">Delete</button>
+  </div>
+</div>
+
+</div>
+
+  <!--Second session-->
+
+
