@@ -7,10 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { PayrollComponent } from './payroll/payroll.component';
+import { ModifyComponent } from './modify/modify.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReportComponent } from './report/report.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,15 @@ import { FormsModule } from '@angular/forms';
     MainComponent,
     NavHeaderComponent,
     EmployeeComponent,
-    PayrollComponent,
+    ModifyComponent,
     FooterComponent,
     ReportComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

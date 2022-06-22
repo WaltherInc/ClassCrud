@@ -1,17 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-interface employeeInterface {
-  firstName: string;
-  lastName: string;
-  identificationDocument: number;
-  expeditionPlace: string;
-  residenceAdress: string;
-  city: string;
-  departament: string;
-  country: string;
-  email: string;
-  education: string;
-  academicTitle: string;
-}
+import { Router, Routes } from '@angular/router';
+import {EmployeeInterface} from 'src/app/interface/employee-interface'
 
 @Component({
   selector: 'app-employee',
@@ -19,10 +8,11 @@ interface employeeInterface {
   styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent implements OnInit {
-  createEmployee: employeeInterface = {
+  createEmployee: EmployeeInterface = {
+    id:0,
     firstName: '',
     lastName: '',
-    identificationDocument: 0,
+    identificationDocument: '',
     expeditionPlace: '',
     residenceAdress: '',
     city: '',
@@ -35,11 +25,15 @@ export class EmployeeComponent implements OnInit {
 
   public payroll : string = "salary";
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   saveForms () {
     console.log(this.createEmployee);
+  }
+
+  closeTable () {
+    this.router.navigateByUrl ('Report');
   }
 }

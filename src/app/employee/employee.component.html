@@ -12,7 +12,7 @@
 
   <div class="row col-md-2 mb-3 photo">
     <div class="card picture-photo">
-      <img src= "assets/img/employee.png" class="card-img-top" alt="..." width="100%">
+      <img src= "assets/img/employee.png" class="card-img-top" alt="..." width="30%">
     </div>
     <div class="add-photo">
     <a href="#" class="btn btn-primary">Add photo</a>
@@ -43,7 +43,7 @@
 
   <div class="col-md-4 mb-3">
     <label for="validationCustom03" class="form-label">Identification document</label>
-    <input type="text" class="form-c" [(ngModel)]="createEmployee.identificationDocument" name="identificationDocument" placeholder="Write your identification document" id="validationCustom03" required>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.identificationDocument" name="identificationDocument" placeholder="Write your identification document" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
@@ -51,7 +51,7 @@
 
   <div class="col-md-3 mb-3">
     <label for="validationCustom03" class="form-label">Expedition place</label>
-    <input type="text" class="form-c" [(ngModel)]="createEmployee.expeditionPlace" name="expeditionPlace" placeholder="Write your expedition place" id="validationCustom03" required>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.expeditionPlace" name="expeditionPlace" placeholder="Write your expedition place" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
@@ -59,42 +59,33 @@
 
   <div class="col-md-5 mb-3">
     <label for="validationCustom03" class="form-label">Residence address</label>
-    <input type="text" class="form-c" [(ngModel)]="createEmployee.residenceAdress" name="residenceAdress" placeholder="Write your residence address" id="validationCustom03" required>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.residenceAdress" name="residenceAdress" placeholder="Write your residence address" id="validationCustom03" required>
     <div class="invalid-feedback">
-      Please provide a valid city.
+      Please provide a valid residenceAdress.
     </div>
   </div>
 
   <div class="col-md-4 mb-3">
     <label for="validationCustom03" class="form-label">City</label>
-    <input type="text" class="form-c" [(ngModel)]="createEmployee.city" name="city" placeholder="Write your city" class="form-control" id="validationCustom03" required>
+    <input type="text" [(ngModel)]="createEmployee.city" name="city" placeholder="Write your city" class="form-control" id="validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid city.
     </div>
   </div>
 
-  <div class="row">
-
-  </div>
-  <div class="col-md-1 mb-3">
-    <label for="validationCustom04" class="form-label">Department</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
-    <div class="invalid-feedback">
-      Please select a valid departament.
-    </div>
+  <div class="col-md-2 mb-3">
+      <label for="validationCustom03" class="form-label">Departament</label>
+      <input type="text" class="form-control" [(ngModel)]="createEmployee.departament" name="departament" placeholder="Write your departament" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please provide a valid dapartament.
+      </div>
   </div>
 
-  <div class="col-md-2 mb-4">
-    <label for="validationCustom04" class="form-label">Country</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
+  <div class="col-md-2 mb-3">
+    <label for="validationCustom03" class="form-label">Country</label>
+    <input type="text" class="form-control" [(ngModel)]="createEmployee.country" name="Country" placeholder="Write your departament" id="validationCustom03" required>
     <div class="invalid-feedback">
-      Please select a valid country.
+      Please provide a valid country.
     </div>
   </div>
 
@@ -107,16 +98,14 @@
     </div>
 
     <div class="col-md-2 mb-3">
-      <label for="inputState" class="form-label">Education</label>
-      <select id="inputState" class="form-select">
-        <option selected>High School.</option>
-        <option selected>Bachelor’s Degree</option>
-        <option selected>Master’s Degree</option>
-        <option selected>Doctorate</option>
-      </select>
+      <label for="validationCustom03" class="form-label">Education</label>
+      <input type="text" class="form-control" [(ngModel)]="createEmployee.education" name="Education" placeholder="Write your education" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please provide a valid education.
+      </div>
     </div>
 
-  <div class="col-md-3 mb-3">
+  <div class="col-md-2 mb-3">
     <label for="validationCustom03" class="form-label">Academic title</label>
     <input type="text" class="form-control" [(ngModel)]="createEmployee.academicTitle" name="academicTitle" placeholder="Write your academic title" id="validationCustom03" required>
     <div class="invalid-feedback">
@@ -127,19 +116,13 @@
 
 <hr>
 
-</form>
 
 <div class="row col-md-18 mb-3" style="text-align: center;">
   <div class="col-md-20">
-  <button type="button" class="btn btn-primary col-md-1 mb-2 me-2">Modify</button>
-  <button type="button" (click)="saveForms()" class="btn btn-primary col-md-1 mb-2 me-2">Save</button>
-  <button type="button" class="btn btn-primary col-md-1 mb-2 me-2">New employee</button>
-  <button type="button" class="btn btn-secondary col-md-1 mb-2 me-2">Delete</button>
+  <button type="button" class="btn btn-primary col-md-1 me-1">New</button>
+  <button type="button" (click)="saveForms()" class="btn btn-primary col-md-1 me-1">Save</button>
+  <button type="button" class="btn btn-secondary col-mb-3 me-1" (click)="closeTable()">Close</button>
   </div>
 </div>
-
-</div>
-
-  <!--Second session-->
 
 

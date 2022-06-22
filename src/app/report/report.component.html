@@ -1,1 +1,56 @@
-<p>report works!</p>
+<div class="row m-3" style="text-align: right">
+  <div class="col-md-20">
+    <button type="button" class="btn btn-primary col-mb-2 me-1" (click)="newEmployee()">New</button>
+    <button type="button" class="btn btn-secondary col-mb-2 me-1" (click)="closeTable()" >Close</button>
+  </div>
+</div>
+
+<div>
+  <div class="row m-3 col-md-30 mb-5" id="table">
+    <table class="table" id="list">
+      <thead table class="table table-striped table-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">Identification document</th>
+          <th scope="col">Expedition place</th>
+          <th scope="col">Residence address</th>
+          <th scope="col">City</th>
+          <th scope="col">Departament</th>
+          <th scope="col">Country</th>
+          <th scope="col">Email</th>
+          <th scope="col">Education</th>
+          <th scope="col">Academic title</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delet</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let element of info; let i = index">
+          <th scope="row">{{ element.id }}</th>
+          <td>{{ element.firstName }}</td>
+          <td>{{ element.lastName }}</td>
+          <td>{{ element.identificationDocument }}</td>
+          <td>{{ element.expeditionPlace }}</td>
+          <td>{{ element.residenceAdress }}</td>
+          <td>{{ element.city }}</td>
+          <td>{{ element.departament }}</td>
+          <td>{{ element.country }}</td>
+          <td>{{ element.email }}</td>
+          <td>{{ element.education }}</td>
+          <td>{{ element.academicTitle }}</td>
+          <td>
+            <img (click)="modifyEmployee()" class="img-1" src="assets/img/edit.svg" alt="" />
+          </td>
+          <td>
+            <img class="img-2" src="assets/img/trash.svg" alt="" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

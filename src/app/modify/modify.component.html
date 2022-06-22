@@ -1,0 +1,188 @@
+<div class="row m-5">
+  <!--Module-->
+  <div style="text-align: center;">
+    <div class="title">
+      <div>
+        <h1>MODIFY EMPLOYEE</h1>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <!--first session-->
+  <form class="row g-1 needs-validation" novalidate>
+    <div class="col-md-2 mb-3">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.firstName"
+        name="firstName"
+        placeholder="Write your first name"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.lastName"
+        name="lastName"
+        placeholder="Write your last name"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="validationCustom03" class="form-label"
+        >Identification document</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.identificationDocument"
+        name="identificationDocument"
+        placeholder="Write your identification document"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid city.</div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom03" class="form-label"
+        >Expedition place</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.expeditionPlace"
+        name="expeditionPlace"
+        placeholder="Write your expedition place"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid city.</div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom03" class="form-label"
+        >Residence address</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.residenceAdress"
+        name="residenceAdress"
+        placeholder="Write your residence address"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">
+        Please provide a valid residenceAdress.
+      </div>
+    </div>
+
+    <div class="col-md-1 mb-3">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input
+        type="text"
+        [(ngModel)]="modifyEmployee.city"
+        name="city"
+        class="form-control"
+        placeholder="Write here"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid city.</div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="validationCustom03" class="form-label">Departament</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.departament"
+        name="departament"
+        placeholder="Write your departament"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid dapartament.</div>
+    </div>
+
+    <div class="col-md-1 mb-3">
+      <label for="validationCustom03" class="form-label">Country</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.country"
+        name="Country"
+        placeholder="Write here"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid country.</div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom03" class="form-label">Email</label>
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="modifyEmployee.email"
+          name="email"
+          placeholder="Corporate email"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+        <span class="input-group-text" id="basic-addon2"
+          >@transfors.com.co</span
+        >
+      </div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="validationCustom03" class="form-label">Education</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.education"
+        name="Education"
+        placeholder="Write your education"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Please provide a valid education.</div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="validationCustom03" class="form-label">Academic title</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="modifyEmployee.academicTitle"
+        name="academicTitle"
+        placeholder="Write your academic title"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+
+    <hr />
+
+    <div class="row col-md-18 mb-3" style="text-align: center">
+      <div class="col-md-20">
+        <button type="button" class="btn btn-primary col-md-1 me-1" (click)="modifyForms()">Modify</button>
+        <button type="button" class="btn btn-secondary col me-1" (click)="closeTable()">Close</button>
+      </div>
+    </div>
+  </form>
+</div>

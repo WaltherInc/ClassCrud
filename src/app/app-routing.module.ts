@@ -4,14 +4,14 @@ import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { ReportComponent } from './report/report.component';
-import { PayrollComponent } from './payroll/payroll.component';
+import { ModifyComponent } from './modify/modify.component';
 
 
 const routes: Routes = [
   {path: '', component: MainComponent, children: [
     {path: 'home', component: HomeComponent},
     {path: 'employee', component:EmployeeComponent},
-    {path: 'payroll', component:PayrollComponent},
+    {path: 'modify', component:ModifyComponent},
     {path: 'Report', component:ReportComponent}
   ]}
 ];
