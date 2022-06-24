@@ -38,8 +38,12 @@ export class ReportComponent implements OnInit {
     });
   }
 
-  modifyEmployee () {
-    this.router.navigateByUrl ('modify');
+  modifyEmployee (id : number) {
+    this.router.navigateByUrl ('modify/'+id);
+  }
+
+  deleteEmployee (id : number) {
+    this.router.navigateByUrl ('home'+id);
   }
 
   closeTable () {

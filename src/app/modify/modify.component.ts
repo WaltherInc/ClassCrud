@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes } from '@angular/router';
-import { modifyInterface } from '../interface/employee-interface';
+import { EmployeeInterface } from '../interface/employee-interface';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { modifyInterface } from '../interface/employee-interface';
   styleUrls: ['./modify.component.css']
 })
 export class ModifyComponent implements OnInit {
-  modifyEmployee: modifyInterface = {
+  modifyEmployee: EmployeeInterface = {
     id:0,
     firstName: '',
     lastName: '',
@@ -22,6 +22,7 @@ export class ModifyComponent implements OnInit {
     email: '',
     education: '',
     academicTitle: '',
+    archivo: ''
   };
 
   constructor(private router: Router) { }

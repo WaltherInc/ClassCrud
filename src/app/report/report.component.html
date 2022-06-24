@@ -6,7 +6,7 @@
 </div>
 
 <div>
-  <div class="row m-3 col-md-30 mb-5" id="table">
+  <div class="row m-3 col-md-30 mb-5 table-responsive" id="table">
     <table class="table" id="list">
       <thead table class="table table-striped table-dark">
         <tr>
@@ -42,10 +42,10 @@
           <td>{{ element.education }}</td>
           <td>{{ element.academicTitle }}</td>
           <td>
-            <img (click)="modifyEmployee()" class="img-1" src="assets/img/edit.svg" alt="" />
+            <img (click)="modifyEmployee(element.id)" class="img-1" src="assets/img/edit.svg" alt="" />
           </td>
           <td>
-            <img class="img-2" src="assets/img/trash.svg" alt="" />
+            <img (click)="deleteEmployee(element.id)" class="img-2" src="assets/img/trash.svg" alt="" />
           </td>
         </tr>
       </tbody>

@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ReportComponent } from './report/report.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MainemployeeService } from './main/mainemployee.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MainemployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
